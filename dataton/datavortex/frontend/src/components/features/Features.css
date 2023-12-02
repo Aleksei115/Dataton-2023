@@ -1,0 +1,23 @@
+/* Features.css */
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
+}
+
+.feature {
+  text-align: center;
+  max-width: 300px;
+}
+
+.feature h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.feature p {
+  font-size: 1em;
+  color: #ccc;
+}

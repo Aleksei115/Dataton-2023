@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+  position: fixed;
+  width: 100%;
+  margin: 0 0 0 0;
+  z-index: 100;
+  top: 0;
+}
+
+.header.scrolled {
+  background-color: black;
+}
+
+.logo {
+  font-size: 1.5em;
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+nav ul li :hover {
+  color: #61dafb;
+}
+
+/* Estilos adicionales según tu diseño */
