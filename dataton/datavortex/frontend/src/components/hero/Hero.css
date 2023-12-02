@@ -29,7 +29,7 @@
   background-color: #252525;
   color: white;
   padding: 10px 20px;
-  font-size: 1em;
+  font-size: 1.2rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -38,6 +38,14 @@
 
 .hero-btn:hover {
   background-color: #3f3f3f;
+}
+
+.hero-btn:visited {
+  text-decoration: none;
+}
+
+.hero-btn:active {
+  transform: scale(0.95);
 }
 
 /* Estilos adicionales según tu diseño */

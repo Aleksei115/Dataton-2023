@@ -1,0 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+/* Oculta la barra de desplazamiento para todos los elementos */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Para Firefox */
+body {
+  scrollbar-width: none;
+}

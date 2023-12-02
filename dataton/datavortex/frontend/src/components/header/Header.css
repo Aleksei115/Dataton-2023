@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 10px 20px 10px;
   background-color: transparent;
   transition: background-color 0.3s ease-in-out;
   position: fixed;
@@ -27,17 +27,31 @@
 nav ul {
   list-style: none;
   display: flex;
-  margin: 0;
+  margin-right: 35px;
 }
 
 nav ul li {
   margin-right: 20px;
   color: white;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 nav ul li :hover {
-  color: #61dafb;
+  background-color: #3f3f3f;
+  border-radius: 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+}
+
+nav ul li a :hover {
+  background-color: #3f3f3f;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 /* Estilos adicionales según tu diseño */

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Header.css'
 
 const Header = () => {
@@ -6,8 +7,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY
-      if (scrollY > 50) {
+      if (window.scrollY > 20) {
         setIsScrolled(true)
       } else {
         setIsScrolled(false)
@@ -26,9 +26,15 @@ const Header = () => {
       <div className="logo">DATAVORTEX</div>
       <nav>
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
         </ul>
       </nav>
     </header>
