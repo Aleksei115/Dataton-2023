@@ -11,7 +11,7 @@
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .hero-title {
@@ -34,18 +34,15 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  text-decoration: none;
 }
 
 .hero-btn:hover {
   background-color: #3f3f3f;
 }
 
-.hero-btn:visited {
-  text-decoration: none;
-}
-
 .hero-btn:active {
-  transform: scale(0.95);
+  transform: scale(0.8);
 }
 
 /* Estilos adicionales según tu diseño */
