@@ -6,42 +6,16 @@
 
 Asegúrate de tener instalados Python, Django y Node.js en tu sistema.
 
-### 2. Configurar el Proyecto Django
+### 2. Configurar la Aplicación React
 
-#### a. Configurar el Entorno Virtual (Recomendado)
-
-```bash
-# Crear un entorno virtual
-python -m venv myenv
-
-# Activar el entorno virtual
-source myenv/bin/activate  # Linux/macOS
-myenv\Scripts\activate  # Windows
-
-# Instalar Django
-pip install django
-```
-
-#### b. Crear y Configurar el Proyecto Django
+#### a. Instalar las Dependencias de React
 
 ```bash
-# Crear el proyecto Django
-django-admin startproject myproject
+# En el directorio de la aplicación React
+cd frontend
 
-# Entrar al directorio del proyecto
-cd myproject
-
-# Crear la aplicación Django
-python manage.py startapp myapp
-```
-
-### 3. Configurar la Aplicación React
-
-#### a. Crear la Aplicación React
-
-```bash
-# Crear la aplicación React en el directorio de la aplicación Django
-npx create-react-app frontend
+# Instalar las dependencias de React
+npm install
 ```
 
 #### b. Configurar CORS (Cross-Origin Resource Sharing)
@@ -54,7 +28,7 @@ pip install django-cors-headers
 
 Añade `'corsheaders.middleware.CorsMiddleware',` a `MIDDLEWARE` en `settings.py` y configura `CORS_ALLOWED_ORIGINS`.
 
-### 4. Configurar la Integración de React y Django
+### 3. Configurar la Integración de React y Django
 
 #### a. Configurar las Rutas en Django
 
@@ -76,7 +50,7 @@ urlpatterns = [
 
 Crea un archivo `index.html` en la carpeta de plantillas de Django (por ejemplo, `templates`) que se usará como plantilla principal. Este archivo debe incluir la referencia al archivo JavaScript generado por React.
 
-### 5. Ejecutar Ambos Servidores
+### 4. Ejecutar Ambos Servidores
 
 #### a. Iniciar el Servidor de Desarrollo de Django
 
@@ -94,7 +68,7 @@ cd frontend
 npm start
 ```
 
-### 6. Acceder al Proyecto
+### 5. Acceder al Proyecto
 
 Abre tu navegador y ve a http://localhost:8000 para acceder al proyecto Django. La aplicación React estará integrada y disponible en las rutas configuradas.
 
