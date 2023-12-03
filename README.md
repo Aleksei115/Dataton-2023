@@ -1,11 +1,10 @@
-# Dataton-2023
-
-
+#Dataton
+---
 ## Desplegar un Proyecto Django con React
 
 ### 1. Instalar las Dependencias
 
-Asegúrate de tener instalados Python, Django, Node.js y npm (o yarn) en tu sistema.
+Asegúrate de tener instalados Python, Django y Node.js en tu sistema.
 
 ### 2. Configurar el Proyecto Django
 
@@ -47,7 +46,7 @@ npx create-react-app frontend
 
 #### b. Configurar CORS (Cross-Origin Resource Sharing)
 
-Para permitir que el servidor Django acepte solicitudes desde el servidor de desarrollo de React, instala y configura la aplicación django-cors-headers.
+Para permitir que el servidor Django acepte solicitudes desde el servidor de desarrollo de React, instala y configura la aplicación `django-cors-headers`.
 
 ```bash
 pip install django-cors-headers
@@ -92,7 +91,7 @@ python manage.py runserver
 cd frontend
 
 # Ejecutar el servidor de desarrollo de React
-npm run start  # o yarn start
+npm start
 ```
 
 ### 6. Acceder al Proyecto
