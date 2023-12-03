@@ -1,8 +1,6 @@
 # Dataton-2023
 
-Aquí tienes el texto en formato Markdown:
 
-```markdown
 ## Desplegar un Proyecto Django con React
 
 ### 1. Instalar las Dependencias
