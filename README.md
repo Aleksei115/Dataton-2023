@@ -65,7 +65,7 @@ python manage.py runserver
 cd frontend
 
 # Ejecutar el servidor de desarrollo de React
-npm start
+npm run dev
 ```
 
 ### 5. Acceder al Proyecto
