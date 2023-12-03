@@ -23,7 +23,9 @@ const Header = () => {
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="logo">DATAVORTEX</div>
+      <div className="logo">
+        <img src="../../assets/logo.jpg" alt="" />
+      </div>
       <nav>
         <ul>
           <li>

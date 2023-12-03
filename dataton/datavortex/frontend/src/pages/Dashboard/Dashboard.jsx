@@ -1,34 +1,55 @@
-// DashboardComponent.js
-
 import React, { useEffect, useState } from 'react'
+import { Bar } from 'react-chartjs-2'
 import axios from 'axios'
+import 'chart.js/auto' // Importa las escalas automáticamente
 
 const Dashboard = () => {
   const [dashboardData, setDashboardData] = useState([])
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('/api/dashboard/')
-        setDashboardData(response.data.data)
-      } catch (error) {
-        console.error('Error fetching dashboard data:', error)
-      }
-    }
-    fetchData()
+    axios
+      .get('api/dashboard/')
+      .then((response) => {
+        console.log(response.data)
+        setDashboardData(response.data)
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error)
+      })
   }, [])
+
+  const data = {
+    labels: Object.keys(dashboardData),
+    datasets: [
+      {
+        label: 'Educación',
+        data: Object.values(dashboardData),
+        backgroundColor: 'rgba(75,192,192,1)',
+      },
+    ],
+  }
+
+  const options = {
+    scales: {
+      x: {
+        type: 'category',
+        labels: Object.keys(dashboardData),
+      },
+      y: {
+        beginAtZero: true,
+        min: 0, // Ajusta según tus necesidades
+        max: 40000, // Ajusta según tus necesidades
+        ticks: {
+          stepSize: 5000, // Ajusta según tus necesidades
+        },
+      },
+    },
+  }
 
   return (
     <div>
       <h1>Dashboard</h1>
-      <ul>
-        {dashboardData.map((item, index) => (
-          <li key={index}>
-            <h2>{item.title}</h2>
-            <p>{item.description}</p>
-          </li>
-        ))}
-      </ul>
+      <Bar data={data} options={options} />
     </div>
   )
 }
