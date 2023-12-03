@@ -75,9 +75,16 @@ WSGI_APPLICATION = 'dataton.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "djongo",
+        "NAME": "dataton",
+        "CLIENT": {
+            "host": "mongodb+srv://alexgrim:cpcfi612_@datatondb.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000",
+            "username": "alexgrim",
+            "password": "cpcfi612_",
+            "authSource": "dataton",
+            "authMechanism": "SCRAM-SHA-256",
+        },
     }
 }
 
